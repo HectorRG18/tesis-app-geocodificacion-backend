@@ -65,9 +65,12 @@ jobs:
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
+        env:
+          SCM_DO_BUILD_DURING_DEPLOYMENT: false
         with:
           app-name: 'appgeolocalizacion-backend-app-v1'
           slot-name: 'Production'
           startup-command: 'uvicorn app:app --host 0.0.0.0 --port 8000'
+
 
 
