@@ -769,3 +769,4 @@ def actualizar_direccion_geocodificable_lote(items: list[dict]):
 
 
 
+
