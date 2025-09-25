@@ -119,9 +119,10 @@ carpetas = [
 ]
 
 # 🔹 Carpeta base local donde se guardarán
-carpeta_base_local = "modelos_descargados"
+carpeta_base_local = "modelos"
 
 # 🔹 Ejecutar descarga por carpeta
 for carpeta in carpetas:
     descargar_modelo_azure(carpeta, carpeta_base_local)
+
 
