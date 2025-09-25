@@ -15,8 +15,9 @@ from src.ubicacion_finder import CorredorLocationFinder
 from src.predecir_problema import clasificar_direccion
 from typing import Optional, List
 from pydantic import BaseModel
+import os
 
-location_finder = CorredorLocationFinder('AIzaSyCMu8_ldjh0sbamPr3IC-UmF8s90Q0smsk')
+location_finder = CorredorLocationFinder(os.getenv("GOOGLE_API_KEY"))
 import pandas as pd
 
 router = APIRouter()
@@ -764,5 +765,6 @@ def actualizar_direccion_geocodificable_lote(items: list[dict]):
     finally:
         cursor.close()
         conn.close()
+
 
 
