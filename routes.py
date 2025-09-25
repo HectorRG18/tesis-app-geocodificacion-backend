@@ -17,7 +17,7 @@ from typing import Optional, List
 from pydantic import BaseModel
 import os
 
-location_finder = CorredorLocationFinder(os.getenv("GOOGLE_API_KEY"))
+location_finder = CorredorLocationFinder(os.getenv("GOOGLE_MAPS_API_KEY"))
 import pandas as pd
 
 router = APIRouter()
@@ -765,6 +765,7 @@ def actualizar_direccion_geocodificable_lote(items: list[dict]):
     finally:
         cursor.close()
         conn.close()
+
 
 
 
