@@ -68,6 +68,6 @@ jobs:
         with:
           app-name: 'appgeolocalizacion-backend-app-v1'
           slot-name: 'Production'
-          deployment-method: run-from-package
+          startup-command: 'uvicorn app:app --host 0.0.0.0 --port 8000'
 
-          
+
